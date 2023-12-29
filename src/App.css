@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box{
+  background-color: #eee;
+  width: 330px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px;
+}
+input{
+  width: 240px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+}
+.fa-solid:hover{
+  color: orangered;
+  cursor: pointer;
+}
