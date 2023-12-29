@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg'; //unsused var
 import './App.css';
 import axios from'axios';
 
@@ -26,19 +26,19 @@ function App() {
         <h3>League of legend player Searcher</h3>
         <div class="box">
         <input type = 'text' onChange={e => setSearchText(e.target.value)}></input>
-        <i class="fa-solid fa-magnifying-glass"></i>
+        {/* <i class="fa-solid fa-magnifying-glass"></i> */}
         </div>
-        <button onClick={e => searchforplayer(e)}>Search for Player</button>
+        <button class="btn btn3" onClick={e => searchforplayer(e)}>Search for Player</button>
       </div>
-      {JSON.stringify(playerData) != '{}'? 
+      {JSON.stringify(playerData) !== '{}'? 
       <>
-      <p>Data: </p>
+      {/* <p>Data: </p> */}
       <p>Player in Game Name : {playerData.name}</p>
       <p>Summoner Level : {playerData.summonerLevel}</p>
-      <img width={100} height={100} src={"https://ddragon.leagueoflegends.com/cdn/13.24.1/img/profileicon/" + playerData.profileIconId + ".png"}></img>
+      <img width={100} height={100} src={"https://ddragon.leagueoflegends.com/cdn/13.24.1/img/profileicon/" + playerData.profileIconId + ".png"} alt='Loading'></img>
       </> 
       : 
-      <><p>No player data available</p></>
+      <><p></p></>
       }
     </div>
   );
