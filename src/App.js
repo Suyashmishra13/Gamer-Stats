@@ -24,18 +24,18 @@ function App() {
     <div className="App">
       <div className='container'>
         <h3>League of legend player Searcher</h3>
-        <div class="box">
+        <div className="box">
         <input type = 'text' onChange={e => setSearchText(e.target.value)}></input>
         {/* <i class="fa-solid fa-magnifying-glass"></i> */}
         </div>
-        <button class="btn btn3" onClick={e => searchforplayer(e)}>Search for Player</button>
+        <button className="btn btn3" onClick={e => searchforplayer(e)}>Search for Player</button>
       </div>
       {JSON.stringify(playerData) !== '{}'? 
       <>
       {/* <p>Data: </p> */}
-      <p>Player in Game Name : {playerData.name}</p>
+      <p>Player InGame Name : {playerData.name}</p>
       <p>Summoner Level : {playerData.summonerLevel}</p>
-      <img width={100} height={100} src={"https://ddragon.leagueoflegends.com/cdn/13.24.1/img/profileicon/" + playerData.profileIconId + ".png"} alt='Loading'></img>
+      <p>Players Profile Picture : </p><img width={100} height={100} src={"https://ddragon.leagueoflegends.com/cdn/13.24.1/img/profileicon/" + playerData.profileIconId + ".png"} alt='Loading'></img>
       </> 
       : 
       <><p></p></>
